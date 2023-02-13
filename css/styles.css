@@ -183,10 +183,12 @@ a {
   text-align: center; /*Центрируем главную кнопку и героя*/
   padding: 188px 0;
 
-  background-image: linear-gradient(to right,
-   rgba(0, 0, 0, 0.7), 
-   rgba(0, 0, 0, 0.7)),
-  url(../images/people-office.jpg);
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url(../images/people-office.jpg);
 }
 
 .main-section-title {
@@ -241,18 +243,19 @@ a {
   margin-right: 0;
 }
 
-
 .goals-icon {
   width: 64px;
   height: 64px;
 }
 
-.goals-icon-window  { /* Добавляем  иконки */
+.goals-icon-window {
+  /* Добавляем  иконки */
   display: block;
   background-color: var(--color_cloud);
-  height:112px;
+  height: 112px;
   margin-bottom: 8px;
   padding: 24px 100px;
+  border-radius: 4px;
 }
 
 .goals-title {
@@ -349,7 +352,6 @@ a {
   margin: 0;
 }
 
-
 .employees-medias {
   display: flex;
   justify-content: center;
@@ -364,15 +366,16 @@ a {
   padding: 12px 12px;
   display: block;
   background-color: var(--color_iris);
-  height:40px;
+  height: 40px;
   margin: 0 auto;
   margin-bottom: 32px;
-
   border: none;
   border-radius: 50%;
 }
 
-
+.button-media:hover {
+  background-color: var(--color_ocean);
+}
 /*Section Customers*/
 
 .customers-title {
@@ -387,19 +390,45 @@ a {
   margin-bottom: 72px;
 }
 
+.customers-list {
+  display: flex;
+}
+
 .customer-icon-window {
-  display: block;
-  height:88px;
-  /* margin-bottom: 8px; */
+  /* display: block;
+  height: 88px;
   padding: 16px 32px;
+  border: 1px solid var(--color_light-slate);
+  border-radius: 4px; */
+  margin-right: 24px;
+}
+
+.customer-icon-window:last-child() {
+  margin-right: 0;
+}
+
+.customer-icon-button {
+  display: block;
+  margin: 0;
+  padding: 0;
+  height: 88px;
+  padding: 16px 32px;
+  background-color: var(--color_white);
+  border: 1px solid var(--color_light-slate);
+  border-radius: 4px;
 }
 
 .customer-icon {
-  
+  width: 104px;
+  height: 56px;
+  fill: tomato;
 }
 
+/* --color_light-slate */
 
-
+.customer-icon-button:hover {
+  fill: var(--color_ocean);
+}
 
 /* Page - Portfolio */
 /* Page - Portfolio - Buttons */
@@ -486,6 +515,11 @@ a {
   margin-bottom: 0; /*Обнуляем нижние границы у последних 3-х элементов*/
 }
 
+.portfolio-item:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
 .portfolio-link {
   text-decoration: none;
 }
@@ -529,6 +563,14 @@ a {
   padding: 100px;
 }
 
+.container-footer {
+  display: flex;
+}
+
+.footer-footer {
+  margin-right: 120px;
+}
+
 .footer-logo {
   font-family: var(--font_secondary, "Arial", sans-serif);
   color: var(--color_cloud);
@@ -548,4 +590,41 @@ a {
   color: var(--color_cornflower);
   width: 264px;
   margin-top: 16px;
+}
+
+.webstudio-media-title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.webstudio-media-list {
+  display: flex;
+  /* justify-content: center; */
+}
+
+.webstudio-media {
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  padding: 8px;
+  margin-right: 16px;
+}
+
+.webstudio-media:last-child {
+  margin-right: 0;
+}
+
+.webstudio-media:hover {
+  background-color: var(--color_green);
+}
+
+.webstudio-media-icon {
+  width: 24px;
+  height: 24px;
 }
