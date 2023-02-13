@@ -182,13 +182,16 @@ a {
   background-color: var(--color_navy-blue);
   text-align: center; /*Центрируем главную кнопку и героя*/
   padding: 188px 0;
-
+  background-repeat: no-repeat;
   background-image: linear-gradient(
       to right,
       rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0.7)
-    ),
+      rgba(0, 0, 0, 0.7)),
     url(../images/people-office.jpg);
+    max-width: 1440px;
+    height: 600px;
+    background-size: contain;
+    margin: 0 auto;
 }
 
 .main-section-title {
@@ -250,12 +253,13 @@ a {
 
 .goals-icon-window {
   /* Добавляем  иконки */
-  display: block;
+  display: flex;
   background-color: var(--color_cloud);
   height: 112px;
   margin-bottom: 8px;
-  padding: 24px 100px;
   border-radius: 4px;
+  align-items: center;
+  justify-content: center;
 }
 
 .goals-title {
@@ -331,7 +335,7 @@ a {
 
 .employees-description {
   padding-top: 32px;
-  margin-bottom: 8px;
+  padding-bottom: 32px;
 }
 
 .employees-name {
@@ -350,10 +354,12 @@ a {
   text-align: center;
   letter-spacing: 0.02em;
   margin: 0;
+  margin-bottom: 8px;
 }
 
 .employees-medias {
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
@@ -368,7 +374,6 @@ a {
   background-color: var(--color_iris);
   height: 40px;
   margin: 0 auto;
-  margin-bottom: 32px;
   border: none;
   border-radius: 50%;
 }
@@ -394,40 +399,36 @@ a {
   display: flex;
 }
 
-.customer-icon-window {
-  /* display: block;
-  height: 88px;
-  padding: 16px 32px;
-  border: 1px solid var(--color_light-slate);
-  border-radius: 4px; */
+
+
+.customer-icon-window:not(:last-child) {
   margin-right: 24px;
 }
 
-.customer-icon-window:last-child() {
-  margin-right: 0;
-}
-
 .customer-icon-button {
-  display: block;
-  margin: 0;
-  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 88px;
-  padding: 16px 32px;
+  width: 168px;
   background-color: var(--color_white);
-  border: 1px solid var(--color_light-slate);
   border-radius: 4px;
+  fill: var(--color_light-slate);
+  border: 1px solid var(--color_light-slate);
+
 }
 
 .customer-icon {
   width: 104px;
   height: 56px;
-  fill: tomato;
 }
 
 /* --color_light-slate */
 
-.customer-icon-button:hover {
+.customer-icon-button:hover,
+.customer-icon-button:focus {
   fill: var(--color_ocean);
+  border: 1px solid var(--color_ocean);
 }
 
 /* Page - Portfolio */
