@@ -186,12 +186,13 @@ a {
   background-image: linear-gradient(
       to right,
       rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0.7)),
+      rgba(0, 0, 0, 0.7)
+    ),
     url(../images/people-office.jpg);
-    max-width: 1440px;
-    height: 600px;
-    background-size: contain;
-    margin: 0 auto;
+  max-width: 1440px;
+  height: 600px;
+  background-size: contain;
+  margin: 0 auto;
 }
 
 .main-section-title {
@@ -399,8 +400,6 @@ a {
   display: flex;
 }
 
-
-
 .customer-icon-window:not(:last-child) {
   margin-right: 24px;
 }
@@ -415,7 +414,6 @@ a {
   border-radius: 4px;
   fill: var(--color_light-slate);
   border: 1px solid var(--color_light-slate);
-
 }
 
 .customer-icon {
