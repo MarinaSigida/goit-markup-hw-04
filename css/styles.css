@@ -191,7 +191,7 @@ a {
     url(../images/people-office.jpg);
   max-width: 1440px;
   height: 600px;
-  background-size: contain;
+  background-size: cover;
   margin: 0 auto;
 }
 
@@ -362,6 +362,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 24px;
 }
 
 .media-icon {
@@ -370,16 +371,17 @@ a {
 }
 
 .button-media {
-  padding: 12px 12px;
-  display: block;
+  display: flex;
   background-color: var(--color_iris);
   height: 40px;
-  margin: 0 auto;
-  border: none;
+  width: 40px;
   border-radius: 50%;
+  justify-content: center;
+  align-items: center;
 }
 
-.button-media:hover {
+.button-media:hover,
+.button-media:focus {
   background-color: var(--color_ocean);
 }
 /*Section Customers*/
@@ -410,10 +412,10 @@ a {
   justify-content: center;
   height: 88px;
   width: 168px;
-  background-color: var(--color_white);
   border-radius: 4px;
-  fill: var(--color_light-slate);
-  border: 1px solid var(--color_light-slate);
+  fill: currentColor;
+  border: 1px solid currentColor;
+  color: var(--color_light-slate);
 }
 
 .customer-icon {
@@ -421,12 +423,9 @@ a {
   height: 56px;
 }
 
-/* --color_light-slate */
-
 .customer-icon-button:hover,
 .customer-icon-button:focus {
-  fill: var(--color_ocean);
-  border: 1px solid var(--color_ocean);
+  color: var(--color_ocean);
 }
 
 /* Page - Portfolio */
@@ -514,13 +513,15 @@ a {
   margin-bottom: 0; /*Обнуляем нижние границы у последних 3-х элементов*/
 }
 
-.portfolio-item:hover {
+.portfolio-link:hover,
+.portfolio-link:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-link {
   text-decoration: none;
+  display: block;
 }
 
 .portfolio-description {
@@ -551,12 +552,14 @@ a {
   color: var(--color_slate);
   margin: 0;
 }
+
 .portfolio-text:hover,
-.portfolio__text:focus {
+.portfolio-text:focus {
   color: var(--color_ocean);
 }
 
 /* Block Footer (repeats) */
+
 .footer {
   background-color: var(--color_navy-blue);
   padding: 100px;
@@ -604,19 +607,17 @@ a {
 
 .webstudio-media-list {
   display: flex;
-  /* justify-content: center; */
+  gap: 16px;
 }
 
 .webstudio-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 40px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   padding: 8px;
-  margin-right: 16px;
-}
-
-.webstudio-media:last-child {
-  margin-right: 0;
 }
 
 .webstudio-media:hover {
